@@ -1,11 +1,21 @@
 'use strict';
 
 const render = (root) => {
+  let gmap = null;
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
   root.append(wrapper);
 }
+wrapper.append(Header(update));
+if (state.selectedStation == null) {
+  wrapper.append(Search(update));
+} else {
+  gmap = Gmap();
+  wrapper.append(gmap);
+}
+root.append(wrapper);
+gmap.init();
 
 const state = {
   stations: null,

@@ -1,4 +1,4 @@
-const StationDetail = (update) => {
+  const StationDetail = (update) => {
   const parent = $('<section class="detail"></section>');
   const iconLeft = $("<i class='fa fa-chevron-left icon-left' aria-hidden='true'></i>");
   const contentMap =$("<div class='content-map'></div>");

@@ -2,11 +2,13 @@
 
 const render = (root) => {
   let gmap = null;
+
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Header(_ => render(root)));
-  root.append(wrapper);
-}
+  const update = function(){
+    render(root);
+  }
+
 wrapper.append(Header(update));
 if (state.selectedStation == null) {
   wrapper.append(Search(update));

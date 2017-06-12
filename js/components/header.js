@@ -11,6 +11,13 @@ const Header = (update) => {
     update()
   })
   header.append(icon);
+  icon.on("click", (e) =>{
+  e.preventDefault();
+  state.selectedStation = null;
+  update();
+})
+if(state.selectedStation != null){
+  header.append(icon);
   header.append(title);
 
   return header;

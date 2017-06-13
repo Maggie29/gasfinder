@@ -6,9 +6,9 @@ const render = (root) => {
   wrapper.append(Header(_ => render(root)));
 
   if(state.selectedStation === null){
-    wrapper.append(search(_ => render(root)));
+    wrapper.append(Search(_ => render(root)));
   }else{
-    wrapper.append(stationDetail(_ => render(root)));
+    wrapper.append(StationDetail(_ => render(root)));
   }
 
   root.append(wrapper);

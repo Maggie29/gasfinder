@@ -1,7 +1,9 @@
+'use strict';
+
 const StationDetail = (update) => {
   const parent = $('<section class="detail"></section>');
   const iconLeft = $("<i class='fa fa-chevron-left icon-left' aria-hidden='true'></i>");
-  const contentMap =$("<div class='content-map'></div>");
+  const containerMap =$("<div class='container-map'></div>");
   const Gmap = $("<div id='map'></div>");
   const station = $('<p class="bold">Grifo ' + state.selectedStation.name + '</p>');
   const hr = $('<hr>');
@@ -11,7 +13,7 @@ const StationDetail = (update) => {
 
   parent.append(iconLeft);
   contentMap.append(map);
-  parent.append(contentMap);
+  parent.append(containerMap);
   parent.append(station);
   parent.append(hr);
   parent.append(address);

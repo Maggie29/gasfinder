@@ -1,4 +1,5 @@
-'use strcit';
+'use strict';
+
 const Search = (update) => {
   const parent = $('<div></div>');
   const div = $('<div class="container-search"></div>');

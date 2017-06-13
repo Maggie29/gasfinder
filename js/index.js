@@ -10,6 +10,7 @@ const render = (root) => {
   }else{
     wrapper.append(stationDetail(_ => render(root)));
   }
+
   root.append(wrapper);
 }
 

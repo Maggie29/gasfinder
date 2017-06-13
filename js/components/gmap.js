@@ -1,20 +1,20 @@
 function initMap(){
   let pos;
   if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(function(position)
-  pos = {
+    navigator.geolocation.getCurrentPosition(function(position){
+      pos = {
     lat: position.coords.latitude,
     lng: position.coords.latitude,
   };
 
       const directionsService = new google.maps.DirectionsService;
       const directionsDisplay = new google.maps.DirectionsRenderer;
-      const map = new google.maps.Map(document.getElementById("map"), {
+      const Gmap = new google.maps.Map(document.getElementById("map"), {
         zoom: 13,
         center: pos
       });
 
-      directionsDisplay.setMap(map);
+      directionsDisplay.setMap(Gmap);
       calculateAndDisplayRoute(directionsService, directionsDisplay, pos);
     })
   }

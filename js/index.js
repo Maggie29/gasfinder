@@ -7,6 +7,8 @@ const render = (root) => {
 
   if(state.selectedStation === null){
     wrapper.append(search(_ => render(root)));
+  }else{
+    wrapper.append(stationDetail(_ => render(root)));
   }
   root.append(wrapper);
 }

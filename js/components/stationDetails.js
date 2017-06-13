@@ -2,8 +2,8 @@ const StationDetail = (update) => {
   const parent = $('<section class="detail"></section>');
   const iconLeft = $("<i class='fa fa-chevron-left icon-left' aria-hidden='true'></i>");
   const contentMap =$("<div class='content-map'></div>");
-  const map = $("<div id='map'></div>");
-  const grifoName = $('<p class="bold">Grifo ' + state.selectedStation.name + '</p>');
+  const Gmap = $("<div id='map'></div>");
+  const station = $('<p class="bold">Grifo ' + state.selectedStation.name + '</p>');
   const hr = $('<hr>');
   const address = $('<span>' + state.selectedStation.address + '</span>');
   const km = $('<span id="km"></span>');
@@ -12,7 +12,7 @@ const StationDetail = (update) => {
   parent.append(iconLeft);
   contentMap.append(map);
   parent.append(contentMap);
-  parent.append(grifoName);
+  parent.append(station);
   parent.append(hr);
   parent.append(address);
   parent.append(km);
